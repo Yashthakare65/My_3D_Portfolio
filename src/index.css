@@ -98,10 +98,16 @@ section {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
-  .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
-  }
+ .hero-3d-layout {
+  @apply w-full md:w-full xl:w-[70%] h-[50vh] md:h-[60vh] xl:h-[80vh] relative;
+}
 
+/* Optional: adjust position if you want it floating right on XL screens */
+@media (min-width: 1280px) {
+  .hero-3d-layout {
+    @apply absolute top-1/2 right-0 transform -translate-y-1/2 xl:w-[60%] xl:h-[80vh];
+  }
+}
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
