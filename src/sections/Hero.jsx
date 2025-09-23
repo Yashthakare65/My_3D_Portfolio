@@ -16,7 +16,7 @@ const Hero = () => {
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden ">
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="" />
       </div>
@@ -50,7 +50,7 @@ const Hero = () => {
       Hi, I’m Yash, Aspiring Computer Programmer | Passionate About Coding & Technology
     </p>
 
-    <Button text="See My Work" className="md:w-80 md:h-16 w-60 h-12 mt-5" />
+    <Button text="See My Work" className="md:w-80 md:h-16 w-60 h-12 mt-5" id="counter"/>
   </header>
 
   {/* RIGHT: 3D Model */}
@@ -61,8 +61,9 @@ const Hero = () => {
   </figure>
 </div>
 
-
+    <div className="mt-20">
       <AnimatedCounter />
+      </div>
     </section>
   );
 };
