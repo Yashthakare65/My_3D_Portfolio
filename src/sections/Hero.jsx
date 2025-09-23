@@ -21,54 +21,46 @@ const Hero = () => {
         <img src="/images/bg.png" alt="" />
       </div>
 
-      <div className="hero-layout">
-        {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1>
-                Shaping
-                <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
-                        <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
-            </div>
+     <div className="hero-layout flex flex-col-reverse xl:flex-row items-center xl:items-center justify-between w-full pt-32 xl:pt-40 px-5 md:px-20">
+  {/* LEFT: Hero Text */}
+  <header className="flex flex-col justify-center w-full xl:w-1/2 gap-7">
+    <div className="hero-text">
+      <h1>
+        Shaping
+        <span className="slide">
+          <span className="wrapper">
+            {words.map((word, index) => (
+              <span key={index} className="flex items-center md:gap-3 gap-1 pb-2">
+                <img
+                  src={word.imgPath}
+                  alt="person"
+                  className="xl:w-12 xl:h-12 md:w-10 md:h-10 w-7 h-7 md:p-2 p-1 rounded-full bg-white-50"
+                />
+                <span>{word.text}</span>
+              </span>
+            ))}
+          </span>
+        </span>
+      </h1>
+      <h1>into Real Projects</h1>
+      <h1>that Deliver Results</h1>
+    </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Yash, Aspiring Computer Programmer |<br/> Passionate About Coding & Technology | Dedicated to Learning, Building,<br/> and Exploring Innovative Solutions | Seeking Opportunities to Grow and Contribute
-            </p>
+    <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+      Hi, I’m Yash, Aspiring Computer Programmer | Passionate About Coding & Technology
+    </p>
 
-            <Button
-              text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
-            />
-          </div>
-        </header>
+    <Button text="See My Work" className="md:w-80 md:h-16 w-60 h-12 mt-5" />
+  </header>
 
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
-          </div>
-        </figure>
-      </div>
+  {/* RIGHT: 3D Model */}
+  <figure className="w-full xl:w-1/2 flex justify-center xl:justify-end items-center mb-10 xl:mb-0">
+    <div className="hero-3d-layout w-full md:w-[80%] xl:w-[90%] h-[50vh] md:h-[60vh] xl:h-[80vh]">
+      <HeroExperience />
+    </div>
+  </figure>
+</div>
+
 
       <AnimatedCounter />
     </section>
